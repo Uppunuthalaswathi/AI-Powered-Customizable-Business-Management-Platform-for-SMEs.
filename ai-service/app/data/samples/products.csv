@@ -1,0 +1,4 @@
+product_id,name,category,quantity,unit_price,reorder_level
+SYN-P001,Synthetic ceramic mug,Drinkware,4,12.50,5
+SYN-P002,Synthetic notebook,Stationery,0,3.25,8
+SYN-P003,Synthetic tote bag,Accessories,24,9.00,6

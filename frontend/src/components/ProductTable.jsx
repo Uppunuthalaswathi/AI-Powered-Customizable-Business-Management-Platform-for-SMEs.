@@ -1,0 +1,7 @@
+import StockBadge from './StockBadge.jsx';
+
+const currency = new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 2 });
+export default function ProductTable({ products, onEdit, onDelete }) {
+  if (!products.length) return <div className="empty-state"><div className="empty-icon">▦</div><h3>No products found</h3><p>Add your first product or try changing the search and filter.</p></div>;
+  return <div className="table-scroll"><table><thead><tr><th>Product</th><th>SKU</th><th>Category</th><th>Price</th><th>Quantity</th><th>Stock status</th><th><span className="sr-only">Actions</span></th></tr></thead><tbody>{products.map(product => <tr key={product._id}><td><div className="product-name">{product.name}</div>{product.description && <div className="product-description">{product.description}</div>}</td><td><span className="sku-code">{product.sku}</span></td><td>{product.category}</td><td>{currency.format(product.price)}</td><td><span className={`quantity-value ${product.stockStatus === 'OUT_OF_STOCK' ? 'quantity-zero' : ''}`}>{product.quantity}</span><span className="threshold"> / {product.lowStockThreshold} threshold</span></td><td><StockBadge status={product.stockStatus} /></td><td><div className="row-actions"><button className="text-action" onClick={() => onEdit(product)}>Edit</button><button className="text-action delete-action" onClick={() => onDelete(product)}>Delete</button></div></td></tr>)}</tbody></table></div>;
+}
