@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Stockwise — SME Inventory Dashboard
 
 A beginner-friendly inventory app for a small business. It provides product CRUD, search, stock filters, and live low-stock/out-of-stock counts. This development demo uses one configured business context; it does not include authentication or production-grade tenant authorization.
@@ -155,3 +156,6 @@ npm run build
 ## Limitations and next phases
 
 This phase includes only inventory CRUD and stock alerts. The business ID comes from backend configuration and is not tied to a logged-in person. Do not deploy this as a multi-tenant production system. Authentication, authorization, stronger tenant boundaries, sales, billing, AI features, and external notifications belong to later phases.
+=======
+# AI-Powered-Customizable-Business-Management-Platform-for-SMEs.
+>>>>>>> c90c024e279bce9ed4c9c7b5adbf9cea943c8055
